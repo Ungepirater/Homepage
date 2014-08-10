@@ -29,15 +29,6 @@
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="//static.ungepirater.no/components/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="//static.ungepirater.no/components/konami-js/konami.js"></script>
-      <script type="text/javascript">
-      	$( document ).ready(function() {
-      		var easter_egg = new Konami(function() {
-      			$('body').html('<div id=\"game\"></div>');
-      			$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '/konami.css') );
-      			microSpaceInvaders();
-      		});
-      	});
-      </script>
   </head>
   <body>
   	<%- body %>
@@ -1188,5 +1179,16 @@ initGame();
 };
 })();
 </script>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		var easter_egg = new Konami(function() {
+			$('body').html('<div id=\"game\"></div>');
+			$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '/konami.css') );
+			microSpaceInvaders();
+		});
+	});
+</script>
+
 </body>
 </html>
