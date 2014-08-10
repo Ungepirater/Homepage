@@ -1177,14 +1177,16 @@ window.addEventListener("keyup", keyPressed, true);
 window.addEventListener("resize", resizeCanvas, true);
 initGame();
 };
+document.onreadystatechange = function() {
+	if (document.readyState === "complete") {
+		var easter_egg = new Konami(function() {
+			$('body').html('<div id=\"game\"></div>');
+			$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '/konami.css') );
+			microSpaceInvaders();
+		});
+	}
+};
 })();
-$( document ).ready(function() {
-	var easter_egg = new Konami(function() {
-		$('body').html('<div id=\"game\"></div>');
-		$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '/konami.css') );
-		microSpaceInvaders();
-	});
-});
 </script>
 </body>
 </html>
