@@ -30,7 +30,9 @@
       <script src="//static.ungepirater.no/components/konami-js/konami.js"></script>
       <script type="text/javascript">
       	$( document ).ready(function() {
-      		var easter_egg = new Konami(function() { alert('Konami code!')});
+      		var easter_egg = new Konami(function() {
+      			$('body').html('<div id=\"game\"></div>');
+      		});
       	});
       </script>
   </head>
